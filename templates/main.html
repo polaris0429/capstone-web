@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ data.project.title }} - 메인</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 {{ data.project.title }}</h1>
+            <p class="subtitle">{{ data.project.subtitle }}</p>
+        </header>
+
+        <div class="team-info">
+            <p><strong>팀장:</strong> {{ data.project.team_leader }}</p>
+            <p><strong>팀원:</strong> {{ data.project.team_members | join(', ') }}</p>
+            <p><strong>지도교수:</strong> {{ data.project.advisor }}</p>
+        </div>
+
+        <div class="nav-links">
+            <div class="nav-card">
+                <a href="/subject">📋 작품주제</a>
+            </div>
+            <div class="nav-card">
+                <a href="/rationale">💡 실용적 근거</a>
+            </div>
+            <div class="nav-card">
+                <a href="/features">⚡ 핵심기능</a>
+            </div>
+            <div class="nav-card">
+                <a href="/environment">🛠️ 구현환경</a>
+            </div>
+            <div class="nav-card">
+                <a href="/team">👥 팀 구성</a>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h3>API 엔드포인트</h3>
+            <ul class="tech-list">
+                <li><code>/api/subject</code> - 작품주제 데이터</li>
+                <li><code>/api/rationale</code> - 실용적 근거 데이터</li>
+                <li><code>/api/features</code> - 핵심기능 데이터</li>
+                <li><code>/api/environment</code> - 구현환경 데이터</li>
+                <li><code>/api/team</code> - 팀 구성 데이터</li>
+                <li><code>/api/all</code> - 전체 데이터</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

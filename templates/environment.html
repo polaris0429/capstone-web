@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구현환경</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛠️ 구현환경</h1>
+        </header>
+
+        <div class="content-section">
+            <h3>게임 엔진</h3>
+            <p>{{ data.game_engine }}</p>
+
+            <h3>개발 언어</h3>
+            <p>{{ data.language }}</p>
+
+            <h3>백엔드</h3>
+            <p>{{ data.backend }}</p>
+
+            <h3>주요 서비스</h3>
+            <ul class="tech-list">
+                {% for service in data.services %}
+                <li>{{ service }}</li>
+                {% endfor %}
+            </ul>
+
+            <h3>외부 플랫폼 연동</h3>
+            <p>{{ data.external }}</p>
+
+            <h3>애니메이션 도구</h3>
+            <p>{{ data.animation }}</p>
+
+            <h3>버전 관리</h3>
+            <p>{{ data.version_control }}</p>
+        </div>
+
+        <a href="/main" class="back-link">← 메인으로 돌아가기</a>
+    </div>
+</body>
+</html>

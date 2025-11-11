@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팀 구성</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>👥 팀 구성 및 역할</h1>
+        </header>
+
+        <div class="content-section">
+            <h2>팀원별 역할</h2>
+            <div class="team-grid">
+                {% for name, info in data.items() %}
+                <div class="team-member">
+                    <h3>{{ name }}</h3>
+                    <p class="role">{{ info.role }}</p>
+                    <p class="tasks">담당 업무: {{ info.tasks }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <a href="/main" class="back-link">← 메인으로 돌아가기</a>
+    </div>
+</body>
+</html>

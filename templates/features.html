@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>핵심기능</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ 핵심기능</h1>
+        </header>
+
+        <div class="content-section">
+            <h2>주요 기능</h2>
+            <ul class="feature-list">
+                <li><strong>1.</strong> {{ data.feature1 }}</li>
+                <li><strong>2.</strong> {{ data.feature2 }}</li>
+                <li><strong>3.</strong> {{ data.feature3 }}</li>
+                <li><strong>4.</strong> {{ data.feature4 }}</li>
+                <li><strong>5.</strong> {{ data.feature5 }}</li>
+            </ul>
+        </div>
+
+        <a href="/main" class="back-link">← 메인으로 돌아가기</a>
+    </div>
+</body>
+</html>

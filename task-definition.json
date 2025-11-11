@@ -1,0 +1,29 @@
+{
+  "family": "projectd-task",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "executionRoleArn": "arn:aws:iam::434413664301:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "projectd-container",
+      "image": "434413664301.dkr.ecr.ap-northeast-2.amazonaws.com/projectd:latest",
+      "portMappings": [
+        {
+          "containerPort": 5000,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/projectd",
+          "awslogs-region": "ap-northeast-2",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]
+}

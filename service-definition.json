@@ -1,0 +1,17 @@
+{
+  "cluster": "projectd-cluster",
+  "serviceName": "projectd-service",
+  "taskDefinition": "projectd-task",
+  "desiredCount": 1,
+  "launchType": "FARGATE",
+  "networkConfiguration": {
+    "awsvpcConfiguration": {
+      "subnets": [
+        "subnet-0cfd8c86f8c490994",
+        "subnet-0c5096dd6620466fa"
+      ],
+      "securityGroups": ["sg-07bb5feadb0d402b1"],
+      "assignPublicIp": "ENABLED"
+    }
+  }
+}

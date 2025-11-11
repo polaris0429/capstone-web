@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실용적 근거</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💡 실용적 근거</h1>
+        </header>
+
+        <div class="content-section">
+            <h3>문제 인식</h3>
+            <p>{{ data.problem }}</p>
+
+            <h3>사회적·기술적 필요성</h3>
+            <p>{{ data.necessity }}</p>
+
+            <h3>실용적 가치</h3>
+            <p>{{ data.value }}</p>
+        </div>
+
+        <a href="/main" class="back-link">← 메인으로 돌아가기</a>
+    </div>
+</body>
+</html>

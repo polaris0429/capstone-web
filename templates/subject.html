@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>작품주제</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 작품주제</h1>
+        </header>
+
+        <div class="content-section">
+            <h3>프로젝트 제목</h3>
+            <p>{{ data.title }}</p>
+
+            <h3>프로젝트 목표</h3>
+            <p>{{ data.goal }}</p>
+
+            <h3>한 줄 요약</h3>
+            <p>{{ data.summary }}</p>
+        </div>
+
+        <a href="/main" class="back-link">← 메인으로 돌아가기</a>
+    </div>
+</body>
+</html>
